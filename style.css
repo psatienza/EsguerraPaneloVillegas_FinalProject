@@ -1693,55 +1693,48 @@ footer {
 }
 
 /* MOBILE OVERRIDES */
-/* LIBRARY PAGE — MOBILE LAYOUT */
 @media screen and (max-width: 780px) {
     .container {
         width: 100%;
     }
 
     .current-read {
-        display: flex;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 20% 22% minmax(0, 1fr);
         align-items: center;
         gap: 8px;
-        padding: 15px 8px;
+        padding: 14px 8px;
     }
 
-    .current-title {
-        width: 20%;
-        flex-shrink: 0;
-    }
-
-    .current-image {
-        width: 22%;
-        height: 100px;
-        flex-shrink: 0;
-    }
-
-    .current-info {
+    .current-read .current-title,
+    .current-read .current-image,
+    .current-read .current-info {
         width: auto;
-        flex: 1;
         min-width: 0;
     }
 
-    .current-title h1 {
+    .current-read .current-image {
+        height: 100px;
+    }
+
+    .current-read .current-title h1 {
         font-size: 13px;
     }
 
-    .current-title p {
+    .current-read .current-title p {
         font-size: 8px;
     }
 
-    .current-info h2 {
+    .current-read .current-info h2 {
         font-size: 11px;
     }
 
-    .current-info h4 {
+    .current-read .current-info h4 {
         font-size: 10px;
         margin-bottom: 3px;
     }
 
-    .current-info p {
+    .current-read .current-info p {
         font-size: 7px;
         line-height: 1.4;
     }
@@ -1756,18 +1749,6 @@ footer {
     .tbr-container a {
         width: 100%;
         max-width: 90px;
-        height: 130px;
-    }
-
-    .recommendation-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        justify-items: center;
-        gap: 12px;
-    }
-
-    .recommendation-container a {
-        width: 100%;
         height: 130px;
     }
 }
